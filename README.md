@@ -5,7 +5,7 @@ Pipeline de inferencia HFT (High Frequency Trading) que aísla la carga analíti
 ## Arquitectura
 
 - **Data Plane (C++ / ONNX):** Binario compilado y bloqueado a un único hilo de CPU (`SetIntraOpNumThreads(1)`). Lee los tensores inyectando punteros directamente a la RAM (`MapViewOfFile`) y evalúa el grafo matemático en crudo.
-- **Control Plane (Python):** Script asíncrono que ingesta el mercado, vectoriza las features masivamente (Pandas) y machaca el buffer IPC con cada nuevo *tick*.
+- **Control Plane (Python):** Script asíncrono que ingesta el mercado, vectoriza las features (Pandas) y reescribe el buffer IPC con cada nuevo *tick*.
 
 ```mermaid
 graph LR

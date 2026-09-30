@@ -1,6 +1,6 @@
 # hft-ipc-bridge
 
-Pipeline de inferencia HFT que aísla la carga analítica de la ejecución a bajo nivel. Desacopla Python y C++ mediante memoria compartida nativa (`mmap`), eliminando por completo la latencia de red y de disco.
+Pipeline de inferencia HFT (High Frequency Trading) que aísla la carga analítica de la ejecución a bajo nivel. Desacopla Python y C++ mediante memoria compartida nativa (`mmap`), eliminando la latencia de red y de memoria.
 
 ## Arquitectura
 
